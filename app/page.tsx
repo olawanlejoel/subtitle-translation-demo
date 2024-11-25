@@ -57,13 +57,6 @@ export default function Home() {
 							className="w-full max-w-md border-4 rounded"
 						>
 							<source id="mp4" src={videoUrl} type="video/mp4" />
-							<track
-								label="English"
-								kind="subtitles"
-								srcLang="en"
-								src={`https://res.cloudinary.com/${cloudName}/raw/upload/${videoId}.en-US.azure.vtt`}
-								default
-							/>
 						</video>
 					</div>
 					<div>
@@ -77,12 +70,19 @@ export default function Home() {
 							className="w-full max-w-md border-4 rounded"
 						>
 							<source id="mp4" src={videoUrl} type="video/mp4" />
+
+							<track
+								label="English"
+								kind="subtitles"
+								srcLang="en"
+								src={`https://res.cloudinary.com/${cloudName}/raw/upload/${videoId}.en-US.azure.vtt`}
+								default
+							/>
 							<track
 								label="Spanish"
 								kind="subtitles"
 								srcLang="es"
 								src={`https://res.cloudinary.com/${cloudName}/raw/upload/${videoId}.es-ES.azure.vtt`}
-								default
 							/>
 						</video>
 					</div>
